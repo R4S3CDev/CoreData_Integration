@@ -9,8 +9,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.name, ascending: true)]) var items: FetchedResults<Item>
+    
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            VStack {
+                Button(action: {
+                    let item = Item(context: self.managedObjectContext)
+                    item.name = "Test_\(self.items.count + 1)"
+                    item.date = Date()
+                    
+                    do {
+                        try self.managedObjectContext.save()
+                    }
+                    catch {
+                        // Catch Core Data error here
+                    }
+                    
+                }) {
+                    Text("Create a test Item")
+                        .font(.system(.title, design: .rounded))
+                }
+                .padding()
+                
+                
+                List(items, id: \.self) { item in
+                    VStack(alignment: .leading) {
+                        Text("\(item.name ?? "UNKNOWN")")
+                        Text("\(item.date?.description ?? "UNKNOWN")")
+                    }
+                }
+                
+            }
+            .navigationBarTitle(Text("Core Data Integration"), displayMode: .inline
+            )
+        }
     }
 }
 
