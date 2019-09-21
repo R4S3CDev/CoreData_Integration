@@ -46,7 +46,7 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: self.$isPresentingSheet) {
-                AddNewItemView()
+                AddNewItemView(items: self.items)
             }
             .navigationBarTitle(Text("Core Data Integration"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
@@ -55,8 +55,6 @@ struct ContentView: View {
                 Image(systemName: "plus.circle.fill")
                     .font(.title)
             }))
-            
-            
         }
     }
 }
