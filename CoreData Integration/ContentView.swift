@@ -46,7 +46,7 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: self.$isPresentingSheet) {
-                AddNewItemView(items: self.items)
+                AddNewItemView(managedObjectContext: self.managedObjectContext, items: self.items)
             }
             .navigationBarTitle(Text("Core Data Integration"), displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
