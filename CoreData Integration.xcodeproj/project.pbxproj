@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E09B9AD2336900600403C48 /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09B9AC2336900600403C48 /* AddNewItemView.swift */; };
 		5EF194122336887E0033F0DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF194112336887E0033F0DE /* AppDelegate.swift */; };
 		5EF194142336887E0033F0DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF194132336887E0033F0DE /* SceneDelegate.swift */; };
 		5EF194172336887E0033F0DE /* CoreData_Integration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EF194152336887E0033F0DE /* CoreData_Integration.xcdatamodeld */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E09B9AC2336900600403C48 /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
 		5EF1940E2336887E0033F0DE /* CoreData Integration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreData Integration.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF194112336887E0033F0DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF194132336887E0033F0DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				5EF194112336887E0033F0DE /* AppDelegate.swift */,
 				5EF194132336887E0033F0DE /* SceneDelegate.swift */,
 				5EF194182336887E0033F0DE /* ContentView.swift */,
+				5E09B9AC2336900600403C48 /* AddNewItemView.swift */,
 				5EF1941A233688800033F0DE /* Assets.xcassets */,
 				5EF1941F233688800033F0DE /* LaunchScreen.storyboard */,
 				5EF19422233688800033F0DE /* Info.plist */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF194122336887E0033F0DE /* AppDelegate.swift in Sources */,
+				5E09B9AD2336900600403C48 /* AddNewItemView.swift in Sources */,
 				5EF194142336887E0033F0DE /* SceneDelegate.swift in Sources */,
 				5EF194192336887E0033F0DE /* ContentView.swift in Sources */,
 				5EF194172336887E0033F0DE /* CoreData_Integration.xcdatamodeld in Sources */,

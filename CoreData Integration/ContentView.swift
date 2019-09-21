@@ -13,6 +13,8 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: Item.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Item.name, ascending: true)]) var items: FetchedResults<Item>
     
+    @State private var isPresentingSheet = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -43,8 +45,18 @@ struct ContentView: View {
                 }
                 
             }
-            .navigationBarTitle(Text("Core Data Integration"), displayMode: .inline
-            )
+            .sheet(isPresented: self.$isPresentingSheet) {
+                AddNewItemView()
+            }
+            .navigationBarTitle(Text("Core Data Integration"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                self.isPresentingSheet.toggle()
+            }, label: {
+                Image(systemName: "plus.circle.fill")
+                    .font(.title)
+            }))
+            
+            
         }
     }
 }
