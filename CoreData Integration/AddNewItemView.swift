@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct AddNewItemView: View {
     //This property has been injected from ContentView using .environment
